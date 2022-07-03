@@ -9,7 +9,7 @@ app.use(cors());
 
 mongoose.connect("mongodb://localhost:27017");
 
-// const db = mongoose.connection;
+const db = mongoose.connection;
 
 db.on("connected", () => console.log("conected to mongodb"));
 db.on("error", () => console.log("error"));
